@@ -85,6 +85,11 @@ public class FakeStoreProductService implements ProductService{
         FakeProductDto response =  restTemplate.exchange("https://fakestoreapi.com/products/{id}",HttpMethod.DELETE,entity,FakeProductDto.class,id).getBody();
         return mapProduct(response);
     }
-    
-    
+
+    @Override
+    public Product createProduct(Product product) {
+        return null;
+    }
+
+
 }

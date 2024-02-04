@@ -39,7 +39,10 @@ public class ProductController {
     public Product updateProductById(@PathVariable("id") Long id,@RequestBody Product product){
         return this.productService.updateProductById(id,product);
     }
-
+    @PutMapping
+    public Product createProduct(@RequestBody Product product){
+        return this.productService.createProduct(product);
+    }
     @DeleteMapping("/{id}")
     public Product deleteProductById(@PathVariable("id") Long id){
         return this.productService.deleteProductById(id);
